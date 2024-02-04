@@ -41,7 +41,7 @@ loguru==0.7.2 matplotlib==3.8.2 scikit-image==0.22.0 kaleido
 <th valign="bottom">Val</th>
 <tr><td align="left">pre-processed dataset</td>
 <td align="center"><a href="https://download.ifi.uzh.ch/rpg/bflow/multiflow/train.tar">download</a></td>
-<td align="center"><a href="https://download.ifi.uzh.ch/rpg/bflow/multiflow/test.tar">download</a></td>
+<td align="center"><a href="https://download.ifi.uzh.ch/rpg/bflow/multiflow/val.tar">download</a></td>
 </tr>
 </tbody></table>
 
