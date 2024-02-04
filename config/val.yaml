@@ -1,0 +1,10 @@
+defaults:
+  - dataset: ???
+  - model: ???
+  - _self_
+
+checkpoint: ???
+hardware:
+  num_workers: 4
+  gpus: 0 # GPU idx (multi-gpu not supported for validation)
+batch_size: 8

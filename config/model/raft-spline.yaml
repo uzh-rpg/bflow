@@ -1,0 +1,17 @@
+defaults:
+  - raft_base
+
+name: raft-spline
+detach_bezier: false
+bezier_degree: 2
+use_boundary_images: true
+use_events: true
+use_gma: false
+correlation:
+  ev:
+    target_indices: [1, 2, 3, 4] # 0 idx is the reference. num_bins_context - 1 is the maximum idx.
+    levels: [1, 2, 3, 4] # Number of pyramid levels. Must have the same length as target_indices.
+    radius: [4, 4, 4, 4] # Look-up radius. Must have the same length as target_indices.
+  img:
+    levels: 4
+    radius: 4

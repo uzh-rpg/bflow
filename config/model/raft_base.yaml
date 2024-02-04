@@ -1,0 +1,20 @@
+defaults:
+  - base
+
+num_bins:
+  correlation: null
+num_iter:
+  train: 12
+  test: 12
+correlation:
+  use_cosine_sim: false
+hidden:
+  dim: 128
+context:
+  dim: 128
+  norm: batch
+feature:
+  dim: 256
+  norm: instance
+motion:
+  dim: 128

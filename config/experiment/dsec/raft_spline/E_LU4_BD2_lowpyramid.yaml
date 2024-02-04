@@ -1,0 +1,22 @@
+# @package _global_
+defaults:
+  - override /model: raft-spline
+
+training:
+  limit_val_batches: 0 # no validation
+  multi_loss: false
+  max_steps: 250000
+  lr_scheduler:
+    total_steps: ${..max_steps}
+model:
+  bezier_degree: 2
+  use_boundary_images: false
+  use_events: true
+  correlation:
+    ev:
+      target_indices: [1, 2, 3, 4]
+      levels: [1, 1, 1, 4]
+      radius: [4, 4, 4, 4]
+    img:
+      levels: null
+      radius: null

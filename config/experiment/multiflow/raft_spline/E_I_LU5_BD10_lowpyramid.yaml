@@ -1,0 +1,28 @@
+# @package _global_
+defaults:
+  - override /model: raft-spline
+
+training:
+  multi_loss: true
+  batch_size: 3
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  lr_scheduler:
+    use: true
+model:
+  num_bins:
+    context: 41
+    correlation: 25
+  bezier_degree: 10
+  use_boundary_images: true
+  use_events: true
+  correlation:
+    ev:
+      #target_indices: [1, 2, 3, 4, 5] # for 6 context bins
+      #target_indices: [2, 4, 6, 8, 10] # for 11 context bins
+      target_indices: [8, 16, 24, 32, 40] # for 41 context bins
+      levels: [1, 1, 1, 1, 4]
+      radius: [4, 4, 4, 4, 4]
+    img:
+      levels: 4
+      radius: 4

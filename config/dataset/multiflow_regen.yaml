@@ -1,0 +1,7 @@
+defaults:
+  - base
+
+name: multiflow_regen
+extended_voxel_grid: True # If events outside the borders should be included. May slightly increase the performance.
+downsample: False
+flow_every_n_ms: 50

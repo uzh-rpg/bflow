@@ -1,0 +1,6 @@
+load_voxel_grid: True
+normalize_voxel_grid: True
+path: ???
+photo_augm: False
+return_ev: True
+return_img: True

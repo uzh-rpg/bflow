@@ -1,0 +1,33 @@
+training:
+  multi_loss: true # ATTENTION: This can only be used for the MultiFlow
+  batch_size: 3
+  max_epochs: 1000
+  max_steps: 200000
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  gradient_clip_val: 1
+  limit_train_batches: 1
+  limit_val_batches: 1
+  lr_scheduler:
+    use: true
+    total_steps: ${..max_steps}
+    pct_start: 0.01
+hardware:
+  num_workers: null # Number of workers. By default will take twice the maximum batch size
+  gpus: 0 # Either a single integer (e.g. 3) or a list of integers (e.g. [3, 5, 6])
+logging:
+  only_numbers: False
+  ckpt_every_n_epochs: 1
+  log_every_n_steps: 5000
+  flush_logs_every_n_steps: 1000
+  log_n_val_predictions: 2
+wandb:
+  wandb_runpath: null # Specify WandB run path if you wish to resume from that run. E.g. magehrig/eRAFT/1lmicg6t
+  artifact_runpath: null # Specify WandB run path if you wish to resume with a checkpoint/artifact from that run. Will take current wandb runpath if not specified
+  artifact_name: null # Name of the checkpoint/artifact from which to resume. E.g. checkpoint-1ae609sb:v5
+  resume_only_weights: False # If artifact is provided, you can choose to resume only the weights. Otherwise, the full training state is restored
+  project_name: contflow # Specify group name of the run
+  group_name: ??? # Specify group name of the run
+debugging:
+  test_cpu_dataloading: False
+  profiler: null # {None, simple, advanced, pytorch}
