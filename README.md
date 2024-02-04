@@ -1,5 +1,7 @@
 # Dense Continuous-Time Optical Flow from Event Cameras
 
+![readme](https://github.com/uzh-rpg/bflow/assets/6841681/2b8c7a7f-3c75-49d4-85cd-51c78b0884d3)
+
 This is the official Pytorch implementation of the TPAMI 2024 paper [Dense Continuous-Time Optical Flow from Event Cameras](https://arxiv.org/abs/2203.13674).
 
 If you find this code useful, please cite us:
